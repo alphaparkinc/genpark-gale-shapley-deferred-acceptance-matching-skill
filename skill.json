@@ -1,0 +1,15 @@
+{
+  "name": "genpark-gale-shapley-deferred-acceptance-matching-skill",
+  "version": "1.0.0",
+  "description": "Gale-Shapley deferred acceptance stable bipartite matching algorithm.",
+  "author": "GenPark AI",
+  "license": "Apache-2.0",
+  "dependencies": [],
+  "keywords": [
+    "gale-shapley",
+    "stable-matching",
+    "deferred-acceptance",
+    "market-design",
+    "agentic-ai"
+  ]
+}
