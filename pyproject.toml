@@ -1,0 +1,11 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genpark-gale-shapley-deferred-acceptance-matching-skill"
+version = "1.0.0"
+description = "Gale-Shapley deferred acceptance algorithm for stable two-sided matching and market design"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
