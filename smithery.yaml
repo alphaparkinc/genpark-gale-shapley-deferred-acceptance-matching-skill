@@ -1,0 +1,5 @@
+name: genpark-gale-shapley-deferred-acceptance-matching-skill
+description: Gale-Shapley deferred acceptance algorithm for stable two-sided matching and market design
+version: 1.0.0
+runtime: python
+entrypoint: mcp_server.py
