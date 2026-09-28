@@ -1,22 +1,20 @@
-# GenPark Gale-Shapley Deferred Acceptance Matching Skill
+# Gale-Shapley Stable Matching Skill
 
-Gale-Shapley deferred acceptance algorithm ensuring stable, envy-free, and Pareto-efficient bipartite matching.
-
-Learn more at [GenPark](https://genpark.ai) and the [GenPark MCP Catalog](https://genpark.ai/mcp).
+Nobel Memorial Prize-winning Deferred Acceptance algorithm providing strategy-proof, blocking-pair-free stable matchings.
 
 ```mermaid
-graph LR
-    P[Proposers: Preference Lists] -->|Deferred Proposals| A[Acceptors: Tentative Holds]
-    A -->|Better Offer Received| R[Rejections & Backtracking]
-    R --> P
-    A --> S[Guaranteed Stable Matching No Blocking Pairs]
-    style P fill:#e1f5fe
-    style A fill:#fff9c4
-    style R fill:#ffcdd2
-    style S fill:#c8e6c9
+flowchart TD
+    Free["Free Proposer p Picks Top Unproposed Receiver r"] --> Propose["Propose to r"]
+    Propose --> Check{"Is r Free or Prefers p to Current Partner?"}
+    Check -- Yes --> Engage["Tentatively Engage (p, r); Displace Old Partner"]
+    Check -- No --> Reject["Reject p; Remains in Free Pool"]
+    Engage --> More{"Any Free Proposers Left with Options?"}
+    Reject --> More
+    More -- Yes --> Free
+    More -- No --> Stable["Stable Bipartite Matching Output"]
 ```
 
 ## Features
-- Classic Gale-Shapley proposing-oriented deferred acceptance algorithm.
-- Guaranteed stability with zero blocking pairs.
-- Pure Python standard library.
+- **100% Python Standard Library**: Linear-time preference list traversal.
+- **Guaranteed Stability**: Eliminates all blocking pairs where agents prefer each other.
+- **Proposer-Optimality**: Yields best achievable stable match for proposing agents.
